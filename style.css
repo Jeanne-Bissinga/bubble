@@ -1,0 +1,29 @@
+body{
+    overflow: hidden;
+    min-height: 100vh; 
+    cursor: crosshair;
+}
+
+.bubble{
+    position: absolute;
+    border-radius: 300px;
+    background: rgba(201, 157, 75, 0.601);
+    opacity: 0;
+    animation: anim 8s forwards; /*forwards permet à la bubble de ne pas disparaitre à la fin*/
+    filter: hue-rotate(0deg); /*changement de couleur de la bubble ici à 0 c-a-d couleur de départ*/
+}
+
+@keyframes anim{
+    to{/*A la création de l'animation tu vas jusqu'à...*/
+        top: -250px;
+        opacity: 1;
+        filter: hue-rotate(720deg);/*changement de couleur de la bubble ici à 720 c-a-d changera la couleur de départ en passant par toute les couleurs de la hue jusquà 720 degré*/
+    }
+}
+
+h3{
+    font-size: 10rem;
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(135, 128, 128, 0.556);
+}
